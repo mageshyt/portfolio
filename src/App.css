@@ -7,6 +7,12 @@
   margin: 0;
   box-sizing: border-box;
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
-  /* background: #eeeeee; */
+  background-color: #fdf6f0;
+}
+body::-webkit-scrollbar {
+  display: none;
 }

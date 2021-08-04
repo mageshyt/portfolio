@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Slide from "react-reveal/Slide";
 const AboutMe = () => {
   return (
-    <Container>
+    <Container id="about">
       <Slide left>
         <h1 className="text-5xl text-white text-center scale-75 p-4 ">
           About Me
@@ -13,7 +13,7 @@ const AboutMe = () => {
             <div className="about-wrapper__image">
               <img
                 src="/images/logo.jpg"
-                classNames="img-fluid rounded shadow-lg"
+                classNames="img-fluid profile shadow-lg"
                 height="auto"
                 width="300px"
                 alt=""
@@ -22,9 +22,11 @@ const AboutMe = () => {
           </div>
           <div className="">
             <div className="about-wrapper__info">
-              <p className="about-wrapper__info-text text-white">
-                This is where you can describe about yourself. The more you
-                describe about yourself, the more chances you can!
+              <p className="about-wrapper__info-text font-bold">
+                i am 17 years old and I am software developer who loves to learn
+                new technologies.I started to learn code in mid of 2020. I
+                started with Python and Mastered it then i started web
+                development.
               </p>
 
               <span className="btn p-2">View Resume</span>
@@ -74,7 +76,7 @@ const Info = styled.div`
   height: 395px;
   display: flex;
   align-items: center;
-  /* justify-content: center; */
+
   //! Image container
   .about-wrapper__image {
     display: flex;
@@ -82,6 +84,9 @@ const Info = styled.div`
     justify-content: center;
     height: 300px;
     width: 555px;
+    img {
+      border-radius: 20px;
+    }
   }
   //!Info container
   .about-wrapper__info {
@@ -96,7 +101,7 @@ const Info = styled.div`
   .btn {
     border: 2px solid white;
     color: white;
-    /* font-family: "Roboto", sans-serif; */
+
     transition: all 0.5s ease-out;
     cursor: pointer;
     letter-spacing: 1px;

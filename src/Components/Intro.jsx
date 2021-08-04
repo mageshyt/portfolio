@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 const Intro = () => {
   return (
-    <Container>
+    <Container id="home">
       <InfoBox>
         <Fade left>
           <div className="info">
@@ -14,7 +14,7 @@ const Intro = () => {
           </div>
           <Button className="btn">
             {/* {"button outline "} */}
-            <a href="#">Know More</a>{" "}
+            <a href="#about">Know More</a>{" "}
           </Button>
         </Fade>
       </InfoBox>
@@ -29,7 +29,7 @@ const Container = styled.div`
   background: url("/images/bg-3.jpg") no-repeat;
   background-position: cover;
   background-size: cover;
-  height: 1000px;
+  height: 100vh;
   width: 100vw;
   display: flex;
   justify-content: center;
@@ -59,6 +59,14 @@ const InfoBox = styled.div`
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+  @media (max-width: 700px) {
+    h1 {
+      font-size: 2.5rem;
+    }
+    h2 {
+      font-size: 1.8rem;
+    }
+  }
 `;
 
 //----------------------------------------------------------------
@@ -83,7 +91,5 @@ const Button = styled.div`
     box-shadow: inset 12em 0 #02aab0;
     cursor: pointer;
     color: rgb(255, 255, 255);
-  }
-  @media (max-width: 900px) {
   }
 `;

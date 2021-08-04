@@ -5,7 +5,6 @@ const Projects = (props) => {
   return (
     <Container>
       <Wrap>
-        {" "}
         <div className="project__info">
           <h3 className="text-2xl">{props.topics}</h3>
           <div className="m-4 project__description">
@@ -24,7 +23,7 @@ const Projects = (props) => {
           </div>
         </div>
         {/*!image */}
-        <div className="col-lg-8 col-sm-12">
+        <div className="">
           <Tilty>
             <div className=" shadow-2xl project__image border-4  border-gray-900  rounded-lg thumbnail js-tilt">
               <img
@@ -116,21 +115,21 @@ const Wrap = styled.div`
       flex-direction: column;
       justify-content: center;
       flex-wrap: wrap;
-      /* width: auto; */
     }
     .project__description {
-      /* width: 100%; */
       width: auto;
     }
     .project__image {
+      /* height: 40px; */
+      height: auto;
       width: 500px;
     }
   }
   @media (max-width: 900px) {
     flex-direction: column;
     .project__image {
-      width: 400px;
-      height: auto;
+      /* width: 400px;
+      height: auto; */
       /* display: grid;
       grid-template-columns: 1fr; */
     }
