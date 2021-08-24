@@ -54,8 +54,6 @@ function ProjectContainer() {
 
 export default ProjectContainer;
 const Container = styled.div`
-  /* height: 1000px;
-  width: 100vw; */
   h1 {
     font-weight: 800;
     letter-spacing: 2px;

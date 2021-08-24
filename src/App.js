@@ -5,13 +5,14 @@ import Footer from "./Components/footer.jsx";
 import Intro from "./Components/Intro";
 import ProjectContainer from "./Components/ProjectContainer";
 // import Projects from "./Components/Projects";
-
+import Test from "./Components/Test";
 function App() {
   return (
     <div className="App">
       <Intro />
       <AboutMe />
-      <ProjectContainer />
+      <Test />
+      {/* <ProjectContainer /> */}
       <Contact />
       <Footer />
     </div>

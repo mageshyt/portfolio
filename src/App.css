@@ -10,9 +10,12 @@
 html {
   scroll-behavior: smooth;
 }
-body {
+/* body {
   background-color: #fdf6f0;
-}
-body::-webkit-scrollbar {
-  display: none;
+} */
+/* body::-webkit-scrollbar {
+  overflow: hidden;
+} */
+body {
+  overflow-x: hidden;
 }

@@ -57,7 +57,7 @@ const Wrap = styled.div`
 
   .social {
     color: #fff;
-    width: 500px;
+    width: 400px;
     display: flex;
     align-items: center;
     justify-content: space-evenly;

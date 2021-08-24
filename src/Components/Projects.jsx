@@ -1,40 +1,41 @@
 import React from "react";
 import styled from "styled-components";
 import Tilty from "react-tilty";
-const Projects = (props) => {
+const Projects = ({ img, title, description, seeLive, source }) => {
   return (
-    <Container>
-      <Wrap>
-        <div className="project__info">
-          <h3 className="text-2xl">{props.topics}</h3>
-          <div className="m-4 project__description">
-            <p className="">{props.description}</p>
-          </div>
-          <div className="buttons font-bold p-3">
-            <a href={props.seeLive} className="btn-1 ">
-              See Live
-            </a>
-            <a
-              href={props.source}
-              className="btn-2 transition duration-500 ease-in-out  transform hover:-translate-y-2 hover:scale-110"
-            >
-              Source Code
-            </a>
+    <Container className="project__container center">
+      <InnerContainer className="flex items-center justify-evenly  flex-wrap">
+        {/* Left side */}
+        <div className="projects__description text-gray-500">
+          <div>
+            <h2 className="project_topic text-2xl font-bold ">{title}</h2>
+            {/* button */}
+            <p className="">{description}</p>
+            <div className="buttons font-bold p-3">
+              <a href={seeLive} className="btn-1 ">
+                See Live
+              </a>
+              <a
+                href={source}
+                className="btn-2 transition duration-500 ease-in-out  transform hover:-translate-y-2 hover:scale-110"
+              >
+                Source Code
+              </a>
+            </div>
           </div>
         </div>
-        {/*!image */}
-        <div className="">
+        {/* Right side */}
+        {/* <div className="  project__image border-4  border-gray-900  rounded-lg thumbnail js-tilt"> */}
+        <div className="project__image shadow-2xl  ">
           <Tilty>
-            <div className=" shadow-2xl project__image border-4  border-gray-900  rounded-lg thumbnail js-tilt">
-              <img
-                src={props.image}
-                className="h-full w-full p-0.5  img-fluid"
-                alt=""
-              />
-            </div>
+            <img
+              src={img}
+              className="h-full w-full p-0.5 rounded-xl  img-fluid"
+              alt="project_img"
+            />
           </Tilty>
         </div>
-      </Wrap>
+      </InnerContainer>
       {/* <div className="Ptoject__title text-2xl font-bold">Project Title 0</div> */}
     </Container>
   );
@@ -44,58 +45,32 @@ export default Projects;
 
 //------------------------------------------------------------------------------
 const Container = styled.div`
-  /* height: 100vh; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-bottom: 50px;
-  /* @media (max-width: 1200px) {
-    width: 800px;
-  } */
+  height: 650px;
+
+  @media (max-width: 900px) {
+    margin-bottom: 10px;
+  }
+  @media (max-width: 550px) {
+    height: 550px;
+  }
 `;
 //------------------------------------------------------------------------------
 //! Wrap
-const Wrap = styled.div`
-  width: 1320px;
-  height: 500px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  h3 {
-    color: #272341;
-    font-size: 25px;
-  }
-  /* background: black; */
-  //* project__info
-  .project__info {
-    height: 370px;
-    width: 380px;
-  }
-  .project__image {
-    height: 350px;
-    width: 675px;
-    /* background-position: cover;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-image: url("/images/project-1.png"); */
-  }
-  //* Description
-  .project__description {
-    font-family: "Montserrat";
-    color: #272341;
-  }
-  //* buttons
+const InnerContainer = styled.div`
+  height: 600px;
+  width: 98%;
+  margin: auto;
   .buttons {
     display: flex;
     justify-content: space-around;
     align-items: center;
     cursor: pointer;
+
     a {
-      padding: 8px 20px;
-      color: #02aab0;
+      padding: 9px 20px;
+      color: #03aab0;
     }
-    //!button 1
+
     .btn-1 {
       border: 2px solid #31c6da;
       transition: all 0.6s ease-in;
@@ -104,40 +79,31 @@ const Wrap = styled.div`
         color: #eee;
       }
     }
-    //!button 2
+  }
+  .projects__description {
+    width: 400px;
+    height: 200px;
+  }
+
+  .project__image {
+    /* height: 100%; */
+
+    width: 900px;
   }
   @media (max-width: 1200px) {
-    /* margin-top: 70px; */
-    width: 900px;
-    .project__info {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-    .project__description {
-      width: auto;
-    }
     .project__image {
-      /* height: 40px; */
-      height: auto;
-      width: 500px;
-    }
-  }
-  @media (max-width: 900px) {
-    flex-direction: column;
-    .project__image {
-      /* width: 400px;
-      height: auto; */
-      /* display: grid;
-      grid-template-columns: 1fr; */
+      /* height: 100%; */
+
+      width: 700px;
     }
   }
   @media (max-width: 550px) {
+    height: 500px;
+    .projects__description {
+      width: 400px;
+    }
     .project__image {
-      width: 350px;
-      height: 200px;
+      /* margin-bottom: 50px; */
     }
   }
 `;

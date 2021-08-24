@@ -9,8 +9,8 @@ const Intro = () => {
           <div className="info">
             <h1>
               Hi,my name is <span>Magesh</span>
+              <h2>I'm Software Developer 🖖🏻.</h2>
             </h1>
-            <h2>I'm the Software Developer 🖖🏻.</h2>
           </div>
           <Button className="btn">
             {/* {"button outline "} */}
@@ -27,7 +27,7 @@ export default Intro;
 const Container = styled.div`
   /* background: #2c2e43; */
   background: url("/images/bg-3.jpg") no-repeat;
-  background-position: cover;
+  background-position: center;
   background-size: cover;
   height: 100vh;
   width: 100vw;
@@ -36,6 +36,10 @@ const Container = styled.div`
   align-items: center;
 
   @media (max-width: 900px) {
+    width: 100vw;
+    height: 100vh;
+  }
+  @media (max-width: 550px) {
     width: 100vw;
     height: 100vh;
   }

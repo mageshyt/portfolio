@@ -4,138 +4,86 @@ import Slide from "react-reveal/Slide";
 const AboutMe = () => {
   return (
     <Container id="about">
-      <Slide left>
-        <h1 className="text-5xl text-white text-center scale-75 p-4 ">
-          About Me
-        </h1>
-        <Info className="">
-          <div class="">
-            <div className="about-wrapper__image">
-              <img
-                src="/images/logo.jpg"
-                classNames="img-fluid profile shadow-lg"
-                height="auto"
-                width="300px"
-                alt=""
-              />
-            </div>
-          </div>
-          <div className="">
-            <div className="about-wrapper__info">
-              <p className="about-wrapper__info-text font-bold">
-                i am 17 years old and I am software developer who loves to learn
-                new technologies.I started to learn code in mid of 2020. I
-                started with Python and Mastered it then i started web
-                development.
-              </p>
+      <h1 className="text-gray-100 text-5xl text-center">About Me</h1>
 
-              <span className="btn p-2">View Resume</span>
-            </div>
+      <Info className="flex items-center justify-evenly flex-wrap  ">
+        {/* Right section */}
+        <Slide left>
+          <div className="about__image right h-72 ">
+            <img src="/images/logo.jpg" className="rounded-xl" alt="logo" />
           </div>
-        </Info>
-      </Slide>
+        </Slide>
+
+        <Slide right>
+          {/* left section */}
+          <div className="about__text flex items-center justify-center flex-wrap ">
+            {/* Wrapper */}
+            <p className="about-wrapper__info-text font-black text-gray-100 ">
+              i am 17 years old and I am software developer who loves to learn
+              new technologies.I started to learn code in mid of 2020. I started
+              with Python and Mastered it then i started web development.
+            </p>
+            {/* resume */}
+            <span className="btn">View resume</span>
+          </div>
+        </Slide>
+      </Info>
     </Container>
   );
 };
 
 export default AboutMe;
 
-//--------------------------------
+// //--------------------------------
 const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  h1 {
-    font-weight: 800;
-  }
-  font-family: "Montserrat", sans-serif;
   height: 600px;
-  width: 100vw;
+  font-family: "Montserrat", sans-serif;
   background: linear-gradient(135deg, #02aab0, #38dbc0);
   clip-path: polygon(0 0, 100% 0, 100% 81%, 0% 100%);
-  .about {
-    color: white;
-    font-size: 40px;
-    text-align: center;
-    /* margin-top: 10px; */
-    padding-top: 20px;
-  }
+
   @media (max-width: 900px) {
     clip-path: none;
-    height: 700px;
   }
 `;
 
-//-----------------------------------------------------
-//! info
+// //! info
 const Info = styled.div`
-  display: flex;
-  margin-left: 30px;
-  width: 1140px;
-  height: 395px;
-  display: flex;
-  align-items: center;
+  height: 450px;
+  width: 90%;
+  margin: auto;
 
-  //! Image container
-  .about-wrapper__image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 300px;
-    width: 555px;
-    img {
-      border-radius: 20px;
-    }
+  //Info
+  .about__text {
+    width: 500px;
   }
-  //!Info container
-  .about-wrapper__info {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 300px;
-    width: 555px;
-  }
-  //* button
+  // * button
   .btn {
     border: 2px solid white;
+    padding: 8px 10px;
     color: white;
 
     transition: all 0.5s ease-out;
     cursor: pointer;
-    letter-spacing: 1px;
-    margin-top: 10px;
+
     :hover {
       box-shadow: inset 12em 0 #eee;
       /* background: white; */
       color: #02aab0;
     }
   }
-
-  //-----------------------------------------------------
   @media (max-width: 900px) {
-    flex-direction: column;
-    /* justify-content: center; */
-    align-items: center;
-    width: 100vw;
-    height: 100%;
-
-    .about-wrapper__info-text {
-      width: 500px;
-      text-align: left;
+    .about__text {
+      margin-top: 10px;
     }
   }
   @media (max-width: 550px) {
-    height: 100%;
-    .about-wrapper__info-text {
-      width: 350px;
-      text-align: left;
+    height: 500px;
+
+    .about__text {
+      margin-top: 20px;
     }
-  }
-  @media (max-width: 1200px) {
-    .about-wrapper__info {
-      width: 450px;
+    .btn {
+      margin-top: 10px;
     }
   }
 `;
