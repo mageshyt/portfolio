@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
-const Intro = () => {
+import Img from "react-cool-img";
+const Intro = React.memo(() => {
   return (
     <Container id="home">
       <InfoBox>
@@ -20,7 +21,7 @@ const Intro = () => {
       </InfoBox>
     </Container>
   );
-};
+});
 export default Intro;
 
 //Styling

@@ -7,7 +7,7 @@ import ProjectContainer from "./Components/ProjectContainer";
 // import Projects from "./Components/Projects";
 
 import React, { useState, useEffect } from "react";
-const App = React.memo(() => {
+function App() {
   // current window height and width;
   const [windowHeight, setWindowHeight] = useState(window.innerHeight);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -29,6 +29,6 @@ const App = React.memo(() => {
       <Footer />
     </div>
   );
-});
+}
 
 export default App;
