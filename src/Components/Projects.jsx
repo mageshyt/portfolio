@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import Tilty from "react-tilty";
-const Projects = ({ img, title, description, seeLive, source }) => {
+const Projects = ({ img, title, description, seeLive, source, screenSize }) => {
+  console.log("width", screenSize);
   return (
     <Container className="project__container center">
-      <InnerContainer className="flex items-center justify-evenly  flex-wrap">
+      <InnerContainer className="flex items-center justify-evenly ">
         {/* Left side */}
         <div className="projects__description text-gray-500">
           <div>
@@ -26,14 +27,22 @@ const Projects = ({ img, title, description, seeLive, source }) => {
         </div>
         {/* Right side */}
         {/* <div className="  project__image border-4  border-gray-900  rounded-lg thumbnail js-tilt"> */}
-        <div className="project__image shadow-2xl  ">
-          <Tilty>
+        <div className="project__image__container shadow-2xl   ">
+          {screenSize > 640 ? (
+            <Tilty>
+              <img
+                src={img}
+                className="h-full w-full p-0.5 rounded-xl  img-fluid"
+                alt="project_img"
+              />
+            </Tilty>
+          ) : (
             <img
               src={img}
               className="h-full w-full p-0.5 rounded-xl  img-fluid"
               alt="project_img"
             />
-          </Tilty>
+          )}
         </div>
       </InnerContainer>
       {/* <div className="Ptoject__title text-2xl font-bold">Project Title 0</div> */}
@@ -85,25 +94,26 @@ const InnerContainer = styled.div`
     height: 200px;
   }
 
-  .project__image {
+  .project__image__container {
     /* height: 100%; */
-
+    background-color: #ffff;
     width: 900px;
   }
   @media (max-width: 1200px) {
-    .project__image {
-      /* height: 100%; */
-
+    /* flex-direction: column; */
+    flex-wrap: wrap;
+    .project__image__container {
       width: 700px;
     }
   }
+  /* @media (max-width: 900px) {
+    flex-wrap: wrap;
+  } */
+
   @media (max-width: 550px) {
     height: 500px;
     .projects__description {
       width: 400px;
-    }
-    .project__image {
-      /* margin-bottom: 50px; */
     }
   }
 `;

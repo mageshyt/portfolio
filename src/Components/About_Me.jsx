@@ -38,7 +38,14 @@ export default AboutMe;
 const Container = styled.div`
   height: 600px;
   font-family: "Montserrat", sans-serif;
-  background: linear-gradient(135deg, #02aab0, #38dbc0);
+  background-image: linear-gradient(
+    to right bottom,
+    #1ca49d,
+    #00a0ae,
+    #009bbc,
+    #0094c6,
+    #3b8bca
+  );
   clip-path: polygon(0 0, 100% 0, 100% 81%, 0% 100%);
 
   @media (max-width: 900px) {

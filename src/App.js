@@ -5,13 +5,25 @@ import Footer from "./Components/footer.jsx";
 import Intro from "./Components/Intro";
 import ProjectContainer from "./Components/ProjectContainer";
 // import Projects from "./Components/Projects";
-import Test from "./Components/Test";
+
+import React, { useState, useEffect } from "react";
 function App() {
+  // current window height and width;
+  const [windowHeight, setWindowHeight] = useState(window.innerHeight);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  // window resize event
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setWindowHeight(window.innerHeight);
+      setWindowWidth(window.innerWidth);
+    });
+  });
+
   return (
     <div className="App">
       <Intro />
       <AboutMe />
-      <Test />
+      <ProjectContainer WidthSize={windowWidth} />
       {/* <ProjectContainer /> */}
       <Contact />
       <Footer />

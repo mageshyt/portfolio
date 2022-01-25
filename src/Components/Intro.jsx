@@ -9,7 +9,7 @@ const Intro = () => {
           <div className="info">
             <h1>
               Hi,my name is <span>Magesh</span>
-              <h2>I'm Software Developer 🖖🏻.</h2>
+              <h2>I'm Frontend Developer 🖖🏻.</h2>
             </h1>
           </div>
           <Button className="btn">
