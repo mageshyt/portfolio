@@ -3,7 +3,7 @@ import React from "react";
 import projectData from "../assets/Data";
 import Projects from "./Projects";
 
-const ProjectContainer = ({ WidthSize }) => {
+const ProjectContainer = React.memo(({ WidthSize }) => {
   return (
     <div>
       <h1 className="text-4xl font-black mt-4 text-gray-900 text-center">
@@ -24,6 +24,6 @@ const ProjectContainer = ({ WidthSize }) => {
       </div>
     </div>
   );
-};
+});
 
 export default ProjectContainer;

@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import Tilty from "react-tilty";
 const Projects = ({ img, title, description, seeLive, source, screenSize }) => {
-  console.log("width", screenSize);
   return (
     <Container className="project__container center">
       <InnerContainer className="flex items-center justify-evenly ">
