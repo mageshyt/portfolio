@@ -30,9 +30,9 @@ const Projects = ({ img, title, description, seeLive, source, screenSize }) => {
         <div className="project__image__container shadow-2xl   ">
           {screenSize > 640 ? (
             <Tilty>
-              <Img
+              <img
                 src={img}
-                className="h-full w-full p-0.5 rounded-xl  img-fluid"
+                className="h-full w-full p-0.5 rounded-xl bg-black  img-fluid"
                 alt="project_img"
               />
             </Tilty>
@@ -96,7 +96,7 @@ const InnerContainer = styled.div`
 
   .project__image__container {
     /* height: 100%; */
-    background-color: #ffff;
+    background-color: #eee;
     width: 900px;
   }
   @media (max-width: 1200px) {

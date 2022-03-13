@@ -27,7 +27,7 @@ export default Intro;
 //Styling
 const Container = styled.div`
   /* background: #2c2e43; */
-  background: url("/images/bg-3.jpg") no-repeat;
+  background: url("/images/bg-3.webp") no-repeat;
   background-position: center;
   background-size: cover;
   height: 100vh;
