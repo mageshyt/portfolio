@@ -1,17 +1,30 @@
 import React from "react";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
-import Img from "react-cool-img";
+// import Img from "react-cool-img";
+
+import { BackgroundImage } from "react-image-and-background-image-fade";
 const Intro = React.memo(() => {
   return (
     <Container id="home">
+      <BackgroundImage
+        src="/images/bg-3.jpg"
+        height="100%"
+        width="100%"
+        className="bg-cover object-contain bg-center bg-no-repeat "
+        isResponsive={true}
+        lazyLoad
+      />
       <InfoBox>
         <Fade left>
           <div className="info">
-            <h1>
-              Hi,my name is <span>Magesh</span>
+            <div>
+              <h1>
+                Hi,my name is <span>Magesh </span>
+              </h1>
+
               <h2>I'm Frontend Developer 🖖🏻.</h2>
-            </h1>
+            </div>
           </div>
           <Button className="btn">
             {/* {"button outline "} */}
@@ -27,9 +40,9 @@ export default Intro;
 //Styling
 const Container = styled.div`
   /* background: #2c2e43; */
-  background: url("/images/bg-3.jpg") no-repeat;
+  /* background: url("/images/bg-3.jpg") no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: cover; */
   height: 100vh;
   width: 100vw;
   display: flex;
@@ -51,6 +64,7 @@ const InfoBox = styled.div`
   width: 1125px;
   text-align: center;
   color: #fdf6f0;
+  position: absolute;
   h1 {
     font-family: "Roboto Slab", serif;
     font-size: 3.5rem;
