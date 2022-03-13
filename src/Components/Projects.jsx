@@ -2,7 +2,18 @@ import React from "react";
 import styled from "styled-components";
 import Tilty from "react-tilty";
 import Img from "react-cool-img";
-const Projects = ({ img, title, description, seeLive, source, screenSize }) => {
+
+import { Image } from "react-image-and-background-image-fade";
+
+const Projects = ({
+  img,
+  title,
+  description,
+  seeLive,
+  source,
+  screenSize,
+  isLoading,
+}) => {
   return (
     <Container className="project__container center">
       <InnerContainer className="flex items-center justify-evenly ">
@@ -30,9 +41,9 @@ const Projects = ({ img, title, description, seeLive, source, screenSize }) => {
         <div className="project__image__container shadow-2xl   ">
           {screenSize > 640 ? (
             <Tilty>
-              <img
+              <Img
                 src={img}
-                className="h-full w-full p-0.5 rounded-xl bg-black  img-fluid"
+                className="h-full w-full  p-0.5 rounded-xl  img-fluid"
                 alt="project_img"
               />
             </Tilty>

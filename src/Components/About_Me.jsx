@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Slide from "react-reveal/Slide";
 import Img from "react-cool-img";
 
-
 const AboutMe = () => {
   return (
     <Container id="about">
@@ -13,7 +12,7 @@ const AboutMe = () => {
         {/* Right section */}
         <Slide left>
           <div className="about__image right h-72 ">
-            <Img src="/images/logo.jpg" className="rounded-xl" alt="logo" />
+            <Img src="/images/logo.webp" className="rounded-xl" alt="logo" />
           </div>
         </Slide>
 

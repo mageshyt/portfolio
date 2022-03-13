@@ -1,7 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import Fade from "react-reveal/Fade";
-import Img from "react-cool-img";
+// import Img from "react-cool-img";
+
+import { BackgroundImage } from "react-image-and-background-image-fade";
 const Intro = React.memo(() => {
   return (
     <Container id="home">
@@ -9,9 +11,9 @@ const Intro = React.memo(() => {
         <Fade left>
           <div className="info">
             <h1>
-              Hi,my name is <span>Magesh</span>
-              <h2>I'm Frontend Developer 🖖🏻.</h2>
+              Hi,my name is <span>Magesh </span>
             </h1>
+            <h2>I'm Frontend Developer 🖖🏻.</h2>
           </div>
           <Button className="btn">
             {/* {"button outline "} */}
@@ -51,13 +53,14 @@ const InfoBox = styled.div`
   width: 1125px;
   text-align: center;
   color: #fdf6f0;
+
   h1 {
     font-family: "Roboto Slab", serif;
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     letter-spacing: 2px;
   }
   h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   span {
     background: -webkit-linear-gradient(left, #02aab0, #0e98aa);
@@ -66,10 +69,10 @@ const InfoBox = styled.div`
   }
   @media (max-width: 700px) {
     h1 {
-      font-size: 2.5rem;
+      font-size: 1.6rem;
     }
     h2 {
-      font-size: 1.8rem;
+      font-size: 1.2rem;
     }
   }
 `;
