@@ -3,8 +3,6 @@ import styled from "styled-components";
 import Tilty from "react-tilty";
 import Img from "react-cool-img";
 
-import { Image } from "react-image-and-background-image-fade";
-
 const Projects = ({
   img,
   title,
@@ -24,9 +22,18 @@ const Projects = ({
             {/* button */}
             <p className="">{description}</p>
             <div className="buttons font-bold p-3">
-              <a href={seeLive} className="btn-1 ">
-                See Live
-              </a>
+              {seeLive !== null ? (
+                <>
+                  <a href={seeLive} className="btn-1 ">
+                    See Live
+                  </a>
+                </>
+              ) : (
+                <a href={seeLive} className="btn-1 ">
+                  Under Development
+                </a>
+              )}
+
               <a
                 href={source}
                 className="btn-2 transition duration-500 ease-in-out  transform hover:-translate-y-2 hover:scale-110"

@@ -37,11 +37,11 @@ const ProjectContainer = React.memo(({ WidthSize }) => {
         {project.map((item, idx) => (
           <Projects
             key={idx}
-            img={item.projectImg}
-            title={item.title}
-            description={item.description}
-            seeLive={item.seeLive}
-            source={item.source}
+            img={item?.projectImg}
+            title={item?.title}
+            description={item?.description}
+            seeLive={item?.url}
+            source={item?.repo_url}
             screenSize={WidthSize}
             isLoading={loading}
           />
