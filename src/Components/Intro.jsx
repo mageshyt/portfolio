@@ -3,7 +3,6 @@ import styled from "styled-components";
 import Fade from "react-reveal/Fade";
 // import Img from "react-cool-img";
 
-import { BackgroundImage } from "react-image-and-background-image-fade";
 const Intro = React.memo(() => {
   return (
     <Container id="home">

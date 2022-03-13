@@ -133,5 +133,8 @@ const InnerContainer = styled.div`
     .projects__description {
       width: 400px;
     }
+    .btn {
+      font-size: 12px;
+    }
   }
 `;
